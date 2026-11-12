@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">===ç
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encantos de Natal - Início</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <div id="neve-container"></div>
+
+  <header class="cabecalho-principal">
+    <div class="conteudo-cabecalho">
+      <a href="index.html" class="marca" aria-label="Ir para a página inicial">
+        <img src="img/logo.png" alt="Logo Encantos de Natal" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'%23B3202A\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'">
+        <span class="logotipo">Encantos de Natal</span>
+      </a>
+      <nav class="menu-navegacao" id="menu-navegacao">
+        <ul>
+          <li><a href="index.html" class="ativo">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="acoes-cabecalho">
+        <button id="btn-musica" class="btn-icone" title="Música">🎵</button>
+        <button id="btn-tema" class="btn-icone" title="Tema">🌙</button>
+        <a href="produtos.html#carrinho-secao" class="btn-icone" title="Carrinho">🛒 <span id="qtd-carrinho" class="badge-carrinho">0</span></a>
+        <button class="btn-menu" id="btn-menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding-bottom: 0;">
+      <section class="slogan-pagina">
+        <h1>Boutique & Confeitaria Natalina</h1>
+        <p>A magia do Natal em doces, aromas e vestuário especial!</p>
+      </section>
+    </div>
+
+    <section class="secao-hero" style="background-image: url('img/banners/banner-hero.jpg');">
+      <div class="camada-parallax" data-velocidade="0.2"></div>
+    </section>
+
+    <div class="container">
+      <section class="carrossel-container revelar">
+        <div class="carrossel-slides" id="carrossel-slides">
+          <article class="slide">
+            <img src="banners/panetones.jpg" alt="Promo Panetones" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'300\' fill=\'%23B3202A\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'22\' text-anchor=\'middle\'>Festival de Panetones</text></svg>'">
+            <div class="slide-conteudo"><h2>Panetones Trufados</h2></div>
+          </article>
+          <article class="slide">
+            <img src="banners/aromas.jpg" alt="Promo Perfumes" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'300\' fill=\'%231F5D3A\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'22\' text-anchor=\'middle\'>Aromas de Natal</text></svg>'">
+            <div class="slide-conteudo"><h2>Velas & Fragrâncias</h2></div>
+          </article>
+          <article class="slide">
+            <img src="banners/familia.jpg" alt="Promo Roupas" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'300\' fill=\'%23C9A227\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'22\' text-anchor=\'middle\'>Moda Família</text></svg>'">
+            <div class="slide-conteudo"><h2>Suéteres Temáticos</h2></div>
+          </article>
+          <article class="slide">
+            <img src="banners/kit.jpg" alt="Kits Presente" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'300\' fill=\'%2312263F\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'22\' text-anchor=\'middle\'>Kits Especiais</text></svg>'">
+            <div class="slide-conteudo"><h2>Presentes de Natal</h2></div>
+          </article>
+        </div>
+        <button class="carrossel-btn prev" id="btn-prev">❮</button>
+        <button class="carrossel-btn next" id="btn-next">❯</button>
+        <div class="carrossel-indicadores" id="carrossel-indicadores"></div>
+      </section>
+
+      <section class="revelar">
+        <h2 style="text-align: center; margin-bottom: 1rem;">Destaques da Semana</h2>
+        <div class="grid-produtos" id="grid-destaques"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape-principal">
+    <p>&copy; 2026 Encantos de Natal - AV2 Desenvolvimento Web | Créditos: Unsplash e Pixabay</p>
+  </footer>
+
+  <button id="topo">↑</button>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

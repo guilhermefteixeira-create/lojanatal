@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encantos de Natal - Sobre Nós</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <!-- Varal de Luzes Decorativas -->
+  <div class="varal-luzes" aria-hidden="true">
+    <div class="luz"></div><div class="luz"></div><div class="luz"></div>
+    <div class="luz"></div><div class="luz"></div><div class="luz"></div>
+    <div class="luz"></div><div class="luz"></div><div class="luz"></div>
+  </div>
+
+  <!-- Contêiner de Neve -->
+  <div id="neve-container" aria-hidden="true"></div>
+
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho-principal">
+    <div class="conteudo-cabecalho">
+      <div class="marca">
+        <img src="img/logo.png" alt="Logotipo Encantos de Natal" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'45\' height=\'45\' viewBox=\'0 0 24 24\' fill=\'%23B3202A\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'">
+        <span class="logotipo">Encantos de Natal</span>
+      </div>
+
+      <nav class="menu-navegacao" id="menu-navegacao">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html" class="ativo">Sobre Nós</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+
+      <div class="acoes-cabecalho">
+        <button id="btn-musica" class="btn-icone" aria-label="Ligar ou desligar música natalina" title="Música Natalina">🎵</button>
+        <button id="btn-tema" class="btn-icone" aria-label="Alternar tema claro e escuro" title="Tema Noite de Natal">🌙</button>
+        <a href="produtos.html#carrinho-secao" class="btn-icone" aria-label="Ver carrinho de compras" title="Carrinho">
+          🛒 <span id="qtd-carrinho" class="badge-carrinho">0</span>
+        </a>
+        <button class="btn-menu" id="btn-menu" aria-label="Abrir menu de navegação">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Slogan da Página -->
+      <section class="slogan-pagina">
+        <h1>Nossa História Encantada</h1>
+        <p>Conheça a essência, os valores e os criadores por trás da loja natalina mais aconchegante!</p>
+      </section>
+
+      <!-- Contagem Regressiva para o Natal -->
+      <section class="contador-natal revelar">
+        <div class="contador-slides">
+          <div class="contador-slide ativo" style="background-image: url('img contagem regressiva/capa-materias-site-3-.webp');"></div>
+          <div class="contador-slide" style="background-image: url('img contagem regressiva/christmas-family-time-2022-10-11-23-47-04-utc-1-.webp');"></div>
+          <div class="contador-slide" style="background-image: url('img contagem regressiva/images.jpg');"></div>
+          <div class="contador-slide" style="background-image: url('img contagem regressiva/5672eb8a82bee174ca03ca61natal.webp');"></div>
+        </div>
+
+        <div class="contador-conteudo">
+          <h2>Contagem para o Natal</h2>
+          <div class="contador-grid" id="contador-regressivo">
+            <div class="contador-item"><span id="dias">00</span><small>Dias</small></div>
+            <div class="contador-item"><span id="horas">00</span><small>Horas</small></div>
+            <div class="contador-item"><span id="minutos">00</span><small>Min.</small></div>
+            <div class="contador-item"><span id="segundos">00</span><small>Seg.</small></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- História da Loja -->
+      <section class="revelar" style="margin-top: 3rem;">
+        <h2>A Origem da Magia</h2>
+        <p style="margin-top: 1rem;">Nascida no coração das festividades, a <strong>Encantos de Natal</strong> começou com uma receita familiar de panetone e o desejo de espalhar alegria. Com o passar dos anos, expandimos o nosso sonho para unir três paixões natalinas: doces inesquecíveis, fragrâncias acolhedoras e vestuário festivo.</p>
+      </section>
+
+      <!-- Missão, Visão e Valores -->
+      <section class="revelar" style="margin-top: 3rem;">
+        <h2>Missão, Visão e Valores</h2>
+        <div class="grid-segmentos" style="margin-top: 1.5rem;">
+          <article class="card-segmento" style="padding: 1.5rem;">
+            <h3>🎯 Missão</h3>
+            <p>Levar o espírito de fraternidade, conforto e celebração para cada lar através de produtos temáticos artesanais e de alta qualidade.</p>
+          </article>
+          <article class="card-segmento" style="padding: 1.5rem;">
+            <h3>👁️ Visão</h3>
+            <p>Ser a loja referência em artigos natalinos em todo o país, mantendo o toque acolhedor de uma marca feita em família.</p>
+          </article>
+          <article class="card-segmento" style="padding: 1.5rem;">
+            <h3>⭐ Valores</h3>
+            <p>Afeto, tradição, sustentabilidade, criatividade e excelência no atendimento aos nossos clientes.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Equipe de Desenvolvimento (Alunos) -->
+      <section class="revelar" style="margin-top: 3rem;">
+        <h2 style="text-align: center;">Nossa Equipe de Criadores</h2>
+        <p style="text-align: center; margin-bottom: 1.5rem;">Projeto desenvolvido para a AV2 de Desenvolvimento Web do 1º Ano do Ensino Médio Técnico em Informática.</p>
+        
+        <div class="grid-equipe">
+          <article class="card-equipe">
+            <img src="img/avatar-aluno1.png" alt="Foto do Aluno 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%23B3202A\'/><text x=\'50%\' y=\'55%\' fill=\'%23FFF\' font-size=\'30\' text-anchor=\'middle\'>🎅</text></svg>'">
+            <h3>[Guilherme Freire Texeira]</h3>
+            <p><strong>Função:</strong> Desenvolvedor Front-end & HTML/CSS</p>
+          </article>
+          <article class="card-equipe">
+            <img src="img/avatar-aluno2.png" alt="Foto do Aluno 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100\' height=\'100\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'50\' fill=\'%231F5D3A\'/><text x=\'50%\' y=\'55%\' fill=\'%23FFF\' font-size=\'30\' text-anchor=\'middle\'>🎄</text></svg>'">
+            <h3>[Eduardo de Oliveira silva]</h3>
+            <p><strong>Função:</strong> Desenvolvedor JavaScript & Lógica de Produtos</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="rodape-principal">
+    <div class="conteudo-rodape">
+      <div>
+        <h3>Encantos de Natal</h3>
+        <p>Sua boutique natalina completa para um fim de ano inesquecível.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <p><a href="index.html">Início</a> | <a href="produtos.html">Produtos</a> | <a href="sobre.html">Sobre</a></p>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <p>Email: contato@encantosdenatal.com.br</p>
+        <p>Tel: (11) 98765-4321</p>
+      </div>
+    </div>
+    <div class="creditos-rodape">
+      <p>Créditos das imagens e áudios: Unsplash, Pexels e Pixabay (Uso educacional).</p>
+      <p>&copy; 2026 Encantos de Natal - AV2 Desenvolvimento Web - 1º Ano Informática.</p>
+    </div>
+  </footer>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="topo" aria-label="Voltar ao topo da página" title="Voltar ao topo">↑</button>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encantos de Natal - Produtos</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <div id="neve-container"></div>
+
+  <header class="cabecalho-principal">
+    <div class="conteudo-cabecalho">
+      <div class="marca">
+        <img src="img/logo.png" alt="Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'%23B3202A\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'">
+        <span class="logotipo">Encantos de Natal</span>
+      </div>
+      <nav class="menu-navegacao" id="menu-navegacao">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html" class="ativo">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="acoes-cabecalho">
+        <button id="btn-musica" class="btn-icone" title="Música">🎵</button>
+        <button id="btn-tema" class="btn-icone" title="Tema">🌙</button>
+        <a href="#carrinho-secao" class="btn-icone" title="Carrinho">🛒 <span id="qtd-carrinho" class="badge-carrinho">0</span></a>
+        <button class="btn-menu" id="btn-menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="slogan-pagina">
+        <h1>Nosso Catálogo Completo</h1>
+        <p>Encontre o item de Natal perfeito para você!</p>
+      </section>
+
+      <section class="controles-catalogo">
+        <div>
+          <select id="segmento">
+            <option value="todos">Todos os Segmentos</option>
+            <option value="Confeitaria">Confeitaria</option>
+            <option value="Perfumaria">Perfumaria</option>
+            <option value="Roupas">Roupas</option>
+          </select>
+
+          <select id="categoria">
+            <option value="todas">Todas as Categorias</option>
+            <option value="Panetones e Chocotones">Panetones e Chocotones</option>
+            <option value="Biscoitos e Bolos">Biscoitos e Bolos</option>
+            <option value="Perfumes">Perfumes</option>
+            <option value="Velas e Aromatizadores">Velas e Aromatizadores</option>
+            <option value="Suéteres e Pijamas">Suéteres e Pijamas</option>
+            <option value="Gorros, Meias e Fantasias">Gorros, Meias e Fantasias</option>
+          </select>
+        </div>
+        <div>
+          <input type="text" id="busca" placeholder="Buscar produto...">
+        </div>
+      </section>
+
+      <p id="contador" style="font-weight: 600; margin-bottom: 1rem;"></p>
+
+      <section class="grid-produtos" id="lista-produtos"></section>
+
+      <section class="secao-carrinho" id="carrinho-secao">
+        <h2>🛒 Seu Carrinho</h2>
+        <br>
+        <table class="tabela-carrinho">
+          <thead>
+            <tr><th>Produto</th><th>Preço</th><th>Qtd</th><th>Subtotal</th><th>Ação</th></tr>
+          </thead>
+          <tbody id="itens-carrinho"></tbody>
+        </table>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+          <button id="btn-limpar-carrinho" class="btn-natal">Limpar</button>
+          <h3>Total: <span id="total-carrinho">R$ 0,00</span></h3>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal" id="modal-produto">
+    <div class="modal-conteudo">
+      <span class="fechar-modal" id="fechar-modal">&times;</span>
+      <div id="modal-corpo"></div>
+    </div>
+  </div>
+
+  <footer class="rodape-principal">
+    <p>&copy; 2026 Encantos de Natal - AV2 Desenvolvimento Web | Créditos: Unsplash e Pixabay</p>
+  </footer>
+
+  <button id="topo">↑</button>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

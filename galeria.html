@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encantos de Natal - Galeria</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <div id="neve-container"></div>
+
+  <header class="cabecalho-principal">
+    <div class="conteudo-cabecalho">
+      <div class="marca">
+        <img src="img/logo.png" alt="Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'%23B3202A\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'">
+        <span class="logotipo">Encantos de Natal</span>
+      </div>
+      <nav class="menu-navegacao" id="menu-navegacao">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="galeria.html" class="ativo">Galeria</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="acoes-cabecalho">
+        <button id="btn-musica" class="btn-icone">🎵</button>
+        <button id="btn-tema" class="btn-icone">🌙</button>
+        <a href="produtos.html#carrinho-secao" class="btn-icone">🛒 <span id="qtd-carrinho" class="badge-carrinho">0</span></a>
+        <button class="btn-menu" id="btn-menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="slogan-pagina">
+        <h1>Galeria de Natal</h1>
+        <p>Momentos encantados da nossa loja, dos aromas e dos presentes mais especiais.</p>
+      </section>
+
+      <section class="revelar">
+        <div class="grid-galeria" id="galeria-fotos">
+          <img src="banners/panetones.jpg" alt="Panetones natalinos" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'220\' fill=\'%23B3202A\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'18\' text-anchor=\'middle\'>Panetones</text></svg>'">
+          <img src="banners/aromas.jpg" alt="Aromas de Natal" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'220\' fill=\'%231F5D3A\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'18\' text-anchor=\'middle\'>Aromas</text></svg>'">
+          <img src="banners/familia.jpg" alt="Família celebrando o Natal" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'220\' fill=\'%23C9A227\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'18\' text-anchor=\'middle\'>Família</text></svg>'">
+          <img src="banners/kit.jpg" alt="Kits de presentes natalinos" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'220\' fill=\'%2312263F\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'18\' text-anchor=\'middle\'>Kits</text></svg>'">
+          <img src="img/logo.png" alt="Logo da loja" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'300\' height=\'220\' fill=\'%23B3202A\'><rect width=\'100%\' height=\'100%\'/><text x=\'50%\' y=\'50%\' fill=\'%23FFF\' font-size=\'18\' text-anchor=\'middle\'>Logo</text></svg>'">
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal" id="modal-lightbox">
+    <div class="modal-conteudo lightbox-conteudo">
+      <span class="fechar-modal" id="fechar-lightbox">&times;</span>
+      <img id="img-lightbox" src="" alt="Imagem ampliada da galeria">
+    </div>
+  </div>
+
+  <footer class="rodape-principal">
+    <p>&copy; 2026 Encantos de Natal - AV2 Desenvolvimento Web | Créditos: Unsplash e Pixabay</p>
+  </footer>
+
+  <button id="topo">↑</button>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

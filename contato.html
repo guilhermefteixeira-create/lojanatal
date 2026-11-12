@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encantos de Natal - Contato</title>
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <div id="neve-container"></div>
+
+  <header class="cabecalho-principal">
+    <div class="conteudo-cabecalho">
+      <div class="marca">
+        <img src="img/logo.png" alt="Logo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'40\' height=\'40\' viewBox=\'0 0 24 24\' fill=\'%23B3202A\'><path d=\'M12 2L2 22h20L12 2z\'/></svg>'">
+        <span class="logotipo">Encantos de Natal</span>
+      </div>
+      <nav class="menu-navegacao" id="menu-navegacao">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="produtos.html">Produtos</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="galeria.html">Galeria</a></li>
+          <li><a href="contato.html" class="ativo">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="acoes-cabecalho">
+        <button id="btn-musica" class="btn-icone">🎵</button>
+        <button id="btn-tema" class="btn-icone">🌙</button>
+        <a href="produtos.html#carrinho-secao" class="btn-icone">🛒 <span id="qtd-carrinho" class="badge-carrinho">0</span></a>
+        <button class="btn-menu" id="btn-menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="slogan-pagina">
+        <h1>Fale Conosco</h1>
+        <p>Envie-nos uma mensagem de Natal!</p>
+      </section>
+
+      <form class="form-contato revelar" id="form-contato" novalidate>
+        <div class="campo-grupo">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome">
+          <span class="msg-validacao" id="erro-nome"></span>
+        </div>
+        <div class="campo-grupo">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email">
+          <span class="msg-validacao" id="erro-email"></span>
+        </div>
+        <div class="campo-grupo">
+          <label for="assunto">Assunto:</label>
+          <input type="text" id="assunto">
+          <span class="msg-validacao" id="erro-assunto"></span>
+        </div>
+        <div class="campo-grupo">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" rows="4"></textarea>
+          <span class="msg-validacao" id="erro-mensagem"></span>
+        </div>
+        <button type="submit" class="btn-natal">Enviar 🎅</button>
+        <div id="status-envio" class="msg-validacao"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="rodape-principal">
+    <p>&copy; 2026 Encantos de Natal - AV2 Desenvolvimento Web | Créditos: Unsplash e Pixabay</p>
+  </footer>
+
+  <button id="topo">↑</button>
+
+  <script src="js/produtos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+==============================================================================
+ENCANTOS DE NATAL - BOUTIQUE & CONFEITARIA NATALINA
+Avaliação AV2 - Desenvolvimento Web | 1º Ano Ensino Médio Técnico em Informática
+==============================================================================
+
+1. SOBRE A LOJA
+- Nome: Encantos de Natal - Boutique & Confeitaria
+- Descrição: Loja virtual temática de Natal reunindo três segmentos:
+  1. Confeitaria Natalina (Panetones, Chocotones, Biscoitos e Bolos)
+  2. Perfumaria & Aromas (Perfumes, Velas e Difusores)
+  3. Roupas & Vestuário (Suéteres, Pijamas, Gorros e Fantasias)
+
+2. EQUIPE DE DESENVOLVIMENTO
+- Aluno 1: [GUILHERME FREIRE TEIXEIRA] - Estruturação HTML5 e Estilização CSS
+- Aluno 2: [EDUARDO DE OLIVEIRA] -  JavaScript
+
+3. LINKS DO PROJETO (Preencher antes de entregar)
+- Site publicado: https://[SEU-LINK-AQUI].netlify.app / vercel.app
+- Repositório GitHub: https://github.com/[SEU-USUARIO]/loja-natal
+- Vídeo de apresentação: https://youtube.com/watch?v=[SEU-VIDEO]
+
+4. RECURSOS DE JAVASCRIPT IMPLEMENTADOS
+[PÁGINA: index.html]
+- Carrossel / Slideshow automático com indicadores e botões anterior/próximo.
+- Efeito Parallax em JS no banner principal.
+- Animação de neve caindo via DOM dinâmico.
+- Botão de áudio/música de fundo natalina.
+- Botão de alternância de modo claro/escuro ("Noite de Natal").
+
+[PÁGINA: produtos.html]
+- Renderização dinâmica dos 50 produtos a partir de js/produtos.js.
+- Filtro por segmento, categoria e pesquisa por texto em tempo real.
+- Contador de produtos exibidos ("Mostrando X de 50 produtos").
+- Modal de detalhes ao clicar no produto.
+- Carrinho de compras dinâmico (adicionar, alterar quantidade, remover, total em R$,
+  persistência com localStorage e efeito sonoro de sino).
+
+[PÁGINA: sobre.html]
+- Contagem regressiva dinâmica para o dia 25 de Dezembro.
+- Animação ao rolar a página com IntersectionObserver (.revelar).
+
+[PÁGINA: galeria.html]
+- Galeria de imagens com efeito Lightbox (ampliação de imagem ao clicar e fechar no X).
+
+[PÁGINA: contato.html]
+- Validação completa do formulário (nome, e-mail, assunto e mensagem mínima de 10 caracteres).
+
+[TODAS AS PÁGINAS]
+- Botão "Voltar ao topo" suave ativado ao rolar a página.
+- Código protegido contra erros no Console (verifica se o elemento existe no DOM antes de executar).
+
+5. CRÉDITOS DAS MÍDIAS
+- Imagens: Unsplash, Pexels e Pixabay (Uso livre/educacional).
+- Áudios: Pixabay Audio.
+- Tipografia: Google Fonts ("Mountains of Christmas" e "Poppins").

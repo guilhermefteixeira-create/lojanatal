@@ -1,0 +1,336 @@
+/* ==========================================================================
+   LOJA NATALINA: ENCANTOS DE NATAL (Versão Clean & Elegante)
+   Arquivo: css/style.css
+   ========================================================================== */
+
+/* 1. VARIÁVEIS DO SISTEMA */
+:root {
+  --vermelho: #B3202A;
+  --verde: #1F5D3A;
+  --dourado: #C9A227;
+  --neve: #FFFFFF;
+  --creme: #FBF6EA;
+  --noite: #12263F;
+  --texto: #2B2B2B;
+  --fundo-card: #FFFFFF;
+  --borda: #E2D9C5;
+  --fonte-titulo: 'Mountains of Christmas', cursive, serif;
+  --fonte-corpo: 'Poppins', sans-serif;
+  --raio: 10px;
+}
+
+body.tema-escuro {
+  --creme: #0D1B2A;
+  --neve: #1B2A4A;
+  --texto: #F0F4F8;
+  --fundo-card: #152238;
+  --borda: #2C3E50;
+  background-color: var(--creme);
+  color: var(--texto);
+}
+
+/* 2. BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; height: 100%; }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--fonte-corpo);
+  background-color: var(--creme);
+  color: var(--texto);
+  line-height: 1.6;
+  transition: 0.3s ease;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, .logotipo {
+  font-family: var(--fonte-corpo);
+  color: var(--vermelho);
+}
+.card-produto-info h3,
+.card-segmento h3,
+.card-equipe h3,
+.secao-carrinho h2,
+.contador-natal h2,
+.slogan-pagina h1,
+.revelar h2 {
+  font-family: var(--fonte-corpo);
+  font-weight: 700;
+}
+.revelar h2 {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  letter-spacing: 0.02em;
+}
+body.tema-escuro h1, body.tema-escuro h2, body.tema-escuro h3 {
+  color: var(--dourado);
+}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* 3. NEVE E ANIMAÇÕES SUAVES */
+#neve-container {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none; z-index: 9999; overflow: hidden;
+}
+.floco-neve {
+  position: absolute; top: -20px; color: var(--neve);
+  animation: cair 8s linear infinite; opacity: 0.7;
+}
+@keyframes cair {
+  to { transform: translateY(105vh); }
+}
+
+/* 4. CABEÇALHO */
+.cabecalho-principal {
+  position: sticky; top: 0; background-color: rgba(255,255,255,0.96);
+  box-shadow: 0 2px 12px rgba(18,38,63,0.08); z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+body.tema-escuro .cabecalho-principal {
+  background-color: rgba(15, 26, 40, 0.92);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+body.tema-escuro .menu-navegacao a,
+body.tema-escuro .btn-menu,
+body.tema-escuro .btn-icone {
+  color: var(--neve);
+}
+.conteudo-cabecalho {
+  max-width: 1200px; margin: 0 auto; padding: 0.9rem 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.marca {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: 0.7rem; text-decoration: none; cursor: pointer;
+}
+.marca img { width: 62px; height: 62px; display: block; }
+.logotipo {
+  font-family: var(--fonte-corpo);
+  font-size: 1.15rem; font-weight: 700; line-height: 1.1;
+  letter-spacing: 0.04em; white-space: nowrap; color: var(--vermelho);
+}
+
+.menu-navegacao ul { display: flex; list-style: none; gap: 1.3rem; }
+.menu-navegacao a {
+  font-weight: 600; padding: 0.35rem 0.1rem; position: relative; color: var(--noite);
+  transition: color 0.2s ease;
+}
+.menu-navegacao a.ativo, .menu-navegacao a:hover { color: var(--vermelho); }
+.menu-navegacao a.ativo::after {
+  content: ''; position: absolute; bottom: -5px; left: 0;
+  width: 100%; height: 3px; background-color: var(--dourado); border-radius: 10px;
+}
+
+.acoes-cabecalho { display: flex; align-items: center; gap: 0.8rem; }
+.btn-icone {
+  background: linear-gradient(180deg, #fffaf2, #f6efe3);
+  border: 1px solid rgba(178, 32, 42, 0.08);
+  padding: 0.7rem 0.8rem; border-radius: 50%; cursor: pointer;
+  font-size: 1.1rem; position: relative; box-shadow: 0 2px 6px rgba(18,38,63,0.06);
+}
+.badge-carrinho {
+  position: absolute; top: -6px; right: -6px; background: var(--vermelho);
+  color: white; font-size: 0.7rem; font-weight: bold; padding: 2px 6px; border-radius: 10px;
+}
+.btn-menu { display: none; font-size: 1.4rem; color: var(--vermelho); background: none; border: none; }
+
+/* 5. ESTRUTURA GERAL */
+.container { max-width: 1200px; margin: 0 auto; padding: 0.15rem 1rem 0.25rem; }
+.slogan-pagina {
+  text-align: center; margin-bottom: 0.05rem; padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, var(--verde), #2a7a4d);
+  color: var(--neve); border-radius: 18px; box-shadow: 0 12px 28px rgba(31,93,58,0.18);
+}
+.slogan-pagina h1 { color: var(--neve); font-size: clamp(2rem, 4vw, 3rem); }
+.slogan-pagina p { color: rgba(255,255,255,0.92); }
+
+.btn-natal {
+  background: linear-gradient(135deg, var(--vermelho), #d53a48);
+  color: var(--neve); border: none; padding: 0.8rem 1.5rem;
+  border-radius: 999px; font-weight: 700; cursor: pointer; transition: 0.2s ease;
+  box-shadow: 0 8px 18px rgba(179,32,42,0.18);
+}
+.btn-natal:hover {
+  background: linear-gradient(135deg, var(--verde), #2d7a57);
+  transform: translateY(-1px);
+}
+
+/* 6. CARROSSEL & PARALLAX */
+.secao-hero {
+  height: 140px; background-attachment: fixed;
+  background-position: center; background-size: cover;
+  margin-top: 0;
+}
+.carrossel-container {
+  position: relative; overflow: hidden; border-radius: 18px; margin: 0.05rem 0 0.8rem;
+  box-shadow: 0 10px 22px rgba(18,38,63,0.08);
+  background: white;
+}
+
+.carrossel-slides { display: flex; transition: transform 0.4s ease; }
+.slide { min-width: 100%; position: relative; }
+.slide img { width: 100%; height: 320px; object-fit: cover; }
+.slide-conteudo {
+  position: absolute; inset: auto 0 0 0; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.58));
+  color: white; width: 100%; padding: 1rem 1rem 0.9rem; text-align: center;
+}
+.slide-conteudo h2 {
+  font-size: 1.3rem; font-weight: 700; color: white;
+}
+.carrossel-btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  background: rgba(255,255,255,0.85); color: var(--noite); border: none; padding: 0.65rem 0.8rem;
+  border-radius: 50%; cursor: pointer; box-shadow: 0 4px 12px rgba(18,38,63,0.12);
+}
+.prev { left: 14px; } .next { right: 14px; }
+.carrossel-indicadores {
+  position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 7px; background: rgba(255,255,255,0.18); padding: 0.25rem 0.45rem; border-radius: 999px;
+}
+.bolinha { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.7); cursor: pointer; }
+.bolinha.ativa { background: var(--dourado); }
+
+/* 7. CARDS & CATÁLOGO */
+.controles-catalogo {
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between;
+  background: var(--fundo-card); padding: 1rem; border-radius: var(--raio); margin-bottom: 1.5rem;
+}
+.controles-catalogo select, .controles-catalogo input {
+  padding: 0.5rem; border: 1px solid var(--borda); border-radius: 5px;
+  background: var(--fundo-card); color: var(--texto);
+}
+body.tema-escuro .controles-catalogo select,
+body.tema-escuro .controles-catalogo input {
+  background: #0f1d2d; color: var(--texto); border-color: var(--borda);
+}
+.grid-produtos {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.75rem;
+}
+.card-produto {
+  background: var(--fundo-card); border: 1px solid rgba(194, 179, 140, 0.5);
+  border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;
+  justify-content: space-between; transition: 0.25s ease; position: relative;
+  box-shadow: 0 10px 24px rgba(18,38,63,0.05);
+}
+.card-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 28px rgba(18,38,63,0.09);
+  border-color: rgba(201,162,39,0.8);
+}
+.card-produto img { width: 100%; height: 200px; object-fit: cover; cursor: pointer; }
+.card-produto-info {
+  padding: 1rem 1rem 1.15rem; display: flex; flex-direction: column; gap: 0.45rem;
+}
+.card-produto-info h3 {
+  font-size: 1.25rem; line-height: 1.2; color: var(--noite);
+}
+.preco { font-size: 1.3rem; font-weight: 700; color: var(--verde); }
+.tag-destaque {
+  position: absolute; top: 10px; right: 10px; background: linear-gradient(135deg, var(--vermelho), #d53a48);
+  color: white; font-size: 0.72rem; padding: 0.35rem 0.6rem; border-radius: 999px; font-weight: 700;
+  box-shadow: 0 6px 14px rgba(179,32,42,0.2);
+}
+.btn-add {
+  width: 100%; margin-top: 0.45rem; padding: 0.8rem 1rem; border-radius: 12px; font-weight: 700;
+}
+
+/* 8. MODAL & CARRINHO */
+.modal {
+  display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.7); z-index: 2000; justify-content: center; align-items: center; padding: 1rem;
+}
+.modal.ativo { display: flex; }
+.modal-conteudo {
+  background: var(--fundo-card); max-width: 550px; width: 100%;
+  padding: 1.5rem; border-radius: var(--raio); position: relative;
+}
+.fechar-modal { position: absolute; top: 10px; right: 15px; font-size: 1.5rem; cursor: pointer; color: var(--vermelho); }
+
+.lightbox-conteudo {
+  max-width: 800px; padding: 1rem;
+}
+#img-lightbox {
+  width: 100%; max-height: 80vh; object-fit: contain; border-radius: 10px;
+}
+
+.secao-carrinho {
+  background: linear-gradient(180deg, var(--fundo-card), #fffdf9);
+  padding: 1.75rem; border-radius: 18px; border: 1px solid var(--borda);
+  margin-top: 2rem; box-shadow: 0 12px 26px rgba(18,38,63,0.06);
+}
+.tabela-carrinho { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+.tabela-carrinho th, .tabela-carrinho td { padding: 0.6rem; text-align: left; border-bottom: 1px solid var(--borda); }
+
+/* 9. SOBRE, GALERIA, CONTATO E RODAPÉ */
+.contador-natal {
+  position: relative; overflow: hidden; border-radius: 22px; margin: 1.5rem 0;
+  min-height: 320px; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 18px 34px rgba(18,38,63,0.12);
+}
+.contador-slides {
+  position: absolute; inset: 0; z-index: 0;
+}
+.contador-slide {
+  position: absolute; inset: 0; background-size: cover; background-position: center;
+  opacity: 0; transform: scale(1.08); transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.contador-slide.ativo {
+  opacity: 1; transform: scale(1);
+}
+.contador-slide::after {
+  content: ""; position: absolute; inset: 0; background: rgba(18, 38, 63, 0.48);
+}
+.contador-conteudo {
+  position: relative; z-index: 1; text-align: center; padding: 2rem 1rem;
+}
+.contador-natal h2 {
+  font-family: var(--fonte-corpo); font-size: clamp(2.2rem, 4vw, 3.4rem);
+  color: white; margin-bottom: 1.5rem; text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+}
+.contador-grid {
+  display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+}
+.contador-item {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-width: 110px; padding: 1rem 0.85rem; background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25); border-radius: 16px;
+  backdrop-filter: blur(2px); box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+.contador-item span {
+  display: block; font-family: var(--fonte-corpo); font-size: clamp(2.8rem, 5vw, 4.6rem);
+  font-weight: 700; line-height: 1; margin-bottom: 0.35rem; letter-spacing: 0.04em; color: white;
+}
+.contador-item small {
+  font-family: var(--fonte-corpo); font-size: 0.8rem; text-transform: uppercase;
+  letter-spacing: 0.08em; opacity: 0.95; color: white;
+}
+
+.grid-galeria { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+.grid-galeria img { width: 100%; height: 160px; object-fit: cover; border-radius: 8px; cursor: pointer; }
+
+.form-contato { display: flex; flex-direction: column; gap: 0.8rem; max-width: 500px; margin: 0 auto; }
+.campo-grupo input, .campo-grupo textarea {
+  width: 100%; padding: 0.6rem; border-radius: 5px; border: 1px solid var(--borda); background: var(--fundo-card); color: var(--texto);
+}
+.msg-validacao { font-size: 0.85rem; min-height: 1.2rem; }
+.erro { color: var(--vermelho); } .sucesso { color: var(--verde); }
+
+.rodape-principal {
+  background: var(--noite); color: white;
+  padding: 2.25rem 1rem 2.5rem;
+  margin-top: 3rem; text-align: center;
+  font-size: 1rem; line-height: 1.8;
+}
+
+#topo {
+  position: fixed; bottom: 20px; right: 20px; background: var(--vermelho);
+  color: white; border: none; width: 40px; height: 40px; border-radius: 50%;
+  display: none; cursor: pointer; z-index: 100;
+}
+#topo.visivel { display: block; }
+.revelar { opacity: 0; transform: translateY(20px); transition: 0.5s ease; }
+.revelar.visivel { opacity: 1; transform: translateY(0); }
